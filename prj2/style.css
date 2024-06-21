@@ -67,10 +67,12 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
     text-transform: uppercase;
     color: var(--color-light);
+    line-height: 1.2;
 }
 
 h1{
     font-size: clamp(40px,4.1vw, 80px);
+    text-transform: none;
 }
 h2{
     font-size: clamp(30px,3.3vw, 64px);
@@ -201,12 +203,13 @@ button{
     position: absolute;
     justify-content: center;
     align-items: flex-start;
-    right: 60px;
-    top:-50px;
+    right: 9.35vw;
+    top:0;
     max-width: 639px;
     min-width: 639px;
     height: auto;
     z-index: -1;
+    scale: 1.35;
 }
 
 .banner-text-description:not(:last-child){
@@ -238,5 +241,55 @@ button{
     text-transform: uppercase;
     flex-shrink: 0;
     overflow-x: hidden;
+}
+
+.work{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--container-padding-x);
+}
+
+.work-text, .work-circle{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.work-text-description{
+    margin-top: 36px;
+}
+
+.work-circle:before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient( #3394F6, #FB03F5);
+    border-radius: 50%;
+    filter: blur(200px);
+    right:0;
+    top:100px;
+    z-index: -1;
+}
+.work-circle:after{
+    content: '';
+    position: absolute;
+    height: 414px;
+    width: 485px;
+    left: 200px;
+    top:-0px;
+    background: url("./icons/Square.svg") center/contain no-repeat;
+}
+
+.marketplace{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.marketplace-text{
+    display: flex;
+    flex-direction: column;
 
 }
