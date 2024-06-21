@@ -61,9 +61,7 @@ p{
     margin-block: 0;
 }
 
-p:not([class]):not(:last-child){
-    margin-bottom: 16px;
-}
+
 
 h1,h2,h3,h4,h5,h6{
     font-weight: 400;
@@ -72,10 +70,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    font-size: 80px;
+    font-size: clamp(40px,4.1vw, 80px);
 }
 h2{
-    font-size: 64px;
+    font-size: clamp(30px,3.3vw, 64px);
 }
 
 
@@ -93,6 +91,7 @@ h2{
 }
 
 button{
+    position: relative;
     display: inline-flex;
     height: var(--input-height);
     padding: 10px 20px;
@@ -100,8 +99,35 @@ button{
     border: var(--border);
     border-radius: var(--border-radius);
     color: var(--color-light);
+    transition: var(--transition-duration);
 }
 
+.button:hover{
+    color: var(--color-accent-1);
+    border-color: var(--color-accent-1);
+    transition: var(--transition-duration);
+}
+
+.button-link{
+    padding-right: 66px;
+}
+
+.button-link:before{
+    content: '';
+    position: absolute;
+    top:50%;
+    right: 30px;
+    translate: 0 -50%;
+    width: 12px;
+    aspect-ratio: 1;
+    background: url("./icons/arrow.svg") center/cover no-repeat;
+    transition: var(--transition-duration);
+}
+
+.button-link:hover.button-link:before{
+    filter: blur(1px);
+    transition: var(--transition-duration);
+}
 
 
 .header{
@@ -139,6 +165,12 @@ button{
     z-index: -1;
 }
 
+.header-logo{
+    flex-shrink: 0;
+}
+.header-social-link{
+    flex-shrink: 0;
+}
 .header-menu-list{
     display: flex;
     column-gap: 52px;
@@ -167,11 +199,13 @@ button{
 }
 .banner-background-image{
     position: absolute;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     right: 60px;
     top:-50px;
+    max-width: 639px;
+    min-width: 639px;
+    height: auto;
     z-index: -1;
 }
 
@@ -183,4 +217,26 @@ button{
 .banner-text-credits{
     display: flex;
     column-gap: 30px;
+}
+
+.separate-text{
+    width: 100%;
+    padding: 24px 0;
+    column-gap: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--color-light);
+    border-bottom: 1px solid var(--color-light);
+    overflow-x: hidden;
+}
+
+.separate-text p {
+    display: flex;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    overflow-x: hidden;
+
 }
