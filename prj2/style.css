@@ -24,6 +24,7 @@
     --color-light : #FFFFFF;
     --color-dark : #0B0B0D;
     --color-accent-1 : #3394F6;
+    --color-accent-2: linear-gradient(#06DBAC, #BD00FF);
 
     --button-height : 48px;
     --container-width: 1320px;
@@ -68,6 +69,7 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     color: var(--color-light);
     line-height: 1.2;
+    margin: 0;
 }
 
 h1{
@@ -109,6 +111,7 @@ button{
     border-color: var(--color-accent-1);
     transition: var(--transition-duration);
 }
+
 
 .button-link{
     padding-right: 66px;
@@ -269,8 +272,6 @@ button{
     background: linear-gradient( #3394F6, #FB03F5);
     border-radius: 50%;
     filter: blur(200px);
-    right:0;
-    top:100px;
     z-index: -1;
 }
 .work-circle:after{
@@ -278,18 +279,78 @@ button{
     position: absolute;
     height: 414px;
     width: 485px;
-    left: 200px;
-    top:-0px;
+    left: 10.41vw;
+    top: 0;
     background: url("./icons/Square.svg") center/contain no-repeat;
+}
+
+.work-circle img{
+    height: auto;
 }
 
 .marketplace{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: var(--container-padding-x);
+    margin-top: 80px;
 }
 
 .marketplace-text{
     display: flex;
     flex-direction: column;
+}
 
+.motivation-card-description{
+    margin-top: 19px;
+}
+
+.marketplace-text-button{
+    max-width: 270px;
+    margin-top: 60px;
+}
+
+.marketplace-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.marketplace-images-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.marketplace-images-item img{
+    height: auto;
+}
+
+.marketplace-images-item:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 195px;
+    border: 1px solid var(--color-light);
+    left: -15px;
+    top: 15px;
+    z-index: -1;
+}
+
+.marketplace-images-description p{
+    position: relative;
+    padding-left: 20px;
+}
+
+.marketplace-images-description p:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:0;
+    translate: -0% -50%;
+    width: 14px;
+    aspect-ratio: 1;
+    background: url("./icons/solar.svg") center/contain no-repeat;
 }
