@@ -96,7 +96,6 @@ h2{
 
 button{
     position: relative;
-    display: inline-flex;
     height: var(--input-height);
     padding: 10px 20px;
     background-color: transparent;
@@ -314,7 +313,8 @@ button{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+    padding-left: 100px;
 }
 
 .marketplace-images-item{
@@ -353,4 +353,133 @@ button{
     width: 14px;
     aspect-ratio: 1;
     background: url("./icons/solar.svg") center/contain no-repeat;
+}
+
+.community{
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+    padding: var(--container-padding-x);
+}
+.community:before{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: 30%;
+    background: linear-gradient( #3394F6, #FB03F5);
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -1;
+}
+.community-body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+}
+
+.community-body-description-title{
+    font-weight: 700;
+}
+.community-body-description p{
+    margin-top: 30px;
+}
+
+.discover{
+    padding: var(--container-padding-x);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 150px;
+}
+.discover-filter {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+.discover-list{
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+}
+.discover-filter p{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.discover-title{
+    display: flex;
+    align-items: flex-end;
+}
+
+.discover-title-text {
+    text-transform: none;
+    font-size: 80px;
+}
+
+.album{
+    width: 100%;
+    padding: var(--container-padding-x);
+    display: flex;
+}
+
+.discover-album{
+    width: 100%;
+    display: grid;
+    grid-area: auto;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns:repeat(3, 1fr) ;
+    justify-content: flex-end;
+    justify-items: center;
+    gap: 60px;
+}
+.discover-album-item{
+    display: flex;
+    width: 400px;
+    height: 489px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    border: var(--border);
+    padding: 40px;
+}
+.discover-album-image{
+    transform: translate(25%, -25%);
+    height: 290px;
+    width: 359px;
+}
+
+.discover-album-title{
+
+}
+
+.discover-album-item-description p{
+    display: flex;
+    justify-content: space-between;
+}
+.discover-album-item-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.discover-album-item-buttons button{
+    width: 140px;
+}
+
+.button-buy{
+    background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+    border:none;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.button-buy:hover{
+    color: var(--color-dark);
 }
