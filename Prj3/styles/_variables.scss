@@ -5,20 +5,29 @@
   --color-gray: #F3F3F3;
   --color-gray-alt: #898989;
   --color-dark-alt: #292A32;
+  // Цвета шрифтов
+
 
   --border: 1px solid var(--color-dark);
   --border-radius: 14px;
   --border-radius-small: 7px;
   --border-radius-large: 45px;
+  // Рамка, скругления
 
   --shadow: 0 5px 0 0 var(--color-dark);
+// Тень какого-то дива, пока не знаю
 
   --font-family-base: 'Space Grotesk', sans-serif;
+// Основной шрифт страницы
+
 
   --container-width: 1240px;
   --container-padding-x: 20px;
+// Ширина контента страницы и отступ
+
 
   --section-padding-y: 70px;
+// Вертикальный отступ между секциями
 
   --input-height: 59px;
   --button-height: 68px;

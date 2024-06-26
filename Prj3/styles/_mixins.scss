@@ -1,6 +1,8 @@
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
+// Миксин принимающий максимальную величину шрифта, минимальную и высчитывающий
+// Оптимальное значение с помощью clamp(min, vw, max)
 
 @mixin reset-link {
   color: inherit;
@@ -10,12 +12,16 @@
     text-decoration: none;
   }
 }
+// Наследующий цвет body, и сброс стилей для ссылки
+
 
 @mixin reset-button{
   padding: 0;
   background-color: transparent;
   border:none;
 }
+// Сброс стилей для кнопок
+
 
 @mixin flex-center($isInline: false){
   @if $isInline {
@@ -27,6 +33,8 @@
   justify-content: center;
   align-items: center;
 }
+// Миксин под стандартную центровку блока
+
 
 @mixin abs-center{
   position: absolute;
@@ -34,6 +42,7 @@
   left: 50%;
   translate: -50% -50%;
 }
+// Принудительная центровка блока
 
 @mixin square($size) {
   width: $size;

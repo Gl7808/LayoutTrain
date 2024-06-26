@@ -1,7 +1,9 @@
 .container{
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  // Просчитывает максимальную ширину контейнера 1240 + 40 * 2 = 1320px ширина контейнера
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+  // Задает падинг в 40 пикселей слева и справа
 }
 
 .visually-hidden{
@@ -16,15 +18,17 @@
   clip: rect(0,0,0,0) !important;
   overflow: hidden !important;
 }
+// Оптимальный способ сделать скрытый текст в блоке
 
 .hidden-mobile{
   @include mobile {
     display: none !important;
   }
 }
-
+// Не видно на десктопе и планшете
 .visible-mobile{
   @include mobile-above{
     display: none !important;
   }
 }
+// Видно на десктопе и планшете
