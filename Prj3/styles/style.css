@@ -836,4 +836,26 @@ h4 {
   }
 }
 
+.studies {
+  padding: 70px 60px;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+  font-size: 18px;
+}
+.studies__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.studies__item {
+  --studiesItemPaddingX: 64px;
+}
+.studies__item:not(:first-child) {
+  padding-left: var(--studiesItemPaddingX);
+}
+.studies__item:not(:last-child) {
+  padding-right: var(--studiesItemPaddingX);
+  border-right: 1px solid var(--color-light);
+}
+
 /*# sourceMappingURL=style.css.map */
