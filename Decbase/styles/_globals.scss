@@ -1,0 +1,58 @@
+body{
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.28;
+  color: var(--color-dark-gray);
+  background-color: var(--color-light);
+}
+
+a,button,input,textarea,svg *{
+  transition: var(--transition-duration);
+}
+
+section{
+  padding-top: var(--section-padding-y);
+
+  &:where(:last-child){
+    padding-bottom: 50px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1{
+  @include fluid-text(78, 60);
+}
+
+h2{
+  @include fluid-text(48, 32);
+}
+
+h3{
+  @include fluid-text(24, 20);
+}
+
+h4{
+  @include fluid-text(20, 16);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--color-dark)
+}
+
+.visually-hidden{
+  @include visually-hidden;
+}
+
+.subtitle{
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}

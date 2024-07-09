@@ -1,0 +1,67 @@
+.header{
+  padding-top: 40px;
+
+  &__logo{
+    min-width: 150px;
+  }
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  &__menu{
+    display: flex;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    column-gap: 160px;
+
+    &-list{
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+    }
+
+    &-link{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+
+      @include hover{
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after{
+        content:'';
+        height: 2px;
+        width: 0;
+        position: absolute;
+        top:100%;
+        translate: -50%;
+        left: 50%;
+        background-color: var(--color-decoration);
+
+        transition: inherit;
+      }
+    }
+
+    &-button{
+      min-width: 100px;
+      height: 32px;
+      background-color: var(--color-accent-2);
+      align-self: center;
+      text-transform: none;
+    }
+  }
+
+
+
+}
