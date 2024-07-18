@@ -1,0 +1,25 @@
+.install{
+  margin-top: 230px;
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+
+    &-block{
+      padding: 60px;
+      border-radius: var(--border-radius);
+      display: flex;
+      justify-content: space-between;
+
+      &--desription{
+        max-width: 500px;
+      }
+
+    }
+    &-block-wrapper{
+      display: flex;
+    }
+
+
+  }
+}
